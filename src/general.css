@@ -1,0 +1,25 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.columna-izquierda {
+  flex: 1;
+}
+
+.columna-derecha {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna-izquierda img {
+  height: 100vh;
+  max-width: 100%;
+}
