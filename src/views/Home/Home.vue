@@ -17,15 +17,12 @@ useAuth.getUserLocal()
 <template>
     <p v-if="user === null">Sin Usuario</p>
     <div v-else>
-
         <h1>Hola {{ user.userData.name }}</h1>
-
         <ul>
             <li v-for="(servicio, index) in user.userData.homeServices" :key="index">
                 {{ servicio.cod }}
             </li>
         </ul>
-
     </div>
 </template>
 
