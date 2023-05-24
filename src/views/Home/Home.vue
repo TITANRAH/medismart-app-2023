@@ -1,8 +1,7 @@
 <script setup>
 
-import { useAuthStore } from '../../stores/user-store/auth-store';
 import { storeToRefs } from 'pinia';
-
+import { useAuthStore } from '../../stores/user-store/auth-store';
 
 const useAuth = useAuthStore()
 
@@ -21,11 +20,11 @@ useAuth.getUserLocal()
 
         <h1>Hola {{ user.userData.name }}</h1>
 
-        <!-- <ul>
-                <li v-for="(service, index) in userServices" :key="index">
-                    {{ service.cod }}
-                </li>
-            </ul> -->
+        <ul>
+            <li v-for="(servicio, index) in user.userData.homeServices" :key="index">
+                {{ servicio.cod }}
+            </li>
+        </ul>
 
     </div>
 </template>

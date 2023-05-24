@@ -4,7 +4,6 @@ import { ref } from "vue";
 
 export const useAuthStore = defineStore("auth", () => {
   const url = "https://api-auth-ms-prod.azurewebsites.net/api/Login";
-
   const user = ref(null);
 
   const getUser = async (userName, password) => {
@@ -13,7 +12,6 @@ export const useAuthStore = defineStore("auth", () => {
       password: password,
     };
 
-    //   const headers = {"Accept": "application/json", "Content-Type": "application/json"};
     try {
       const { data } = await axios.post(url, dataUser);
 
