@@ -8,7 +8,7 @@ const useAuth = useAuthStore()
 const { user } = storeToRefs(useAuth)
 
 
-useAuth.getUserLocal()
+// useAuth.getUserLocal()
 
 
 
@@ -23,6 +23,8 @@ useAuth.getUserLocal()
                 {{ servicio.cod }}
             </li>
         </ul>
+
+        <button @click="useAuth.Logout">Logout</button>
     </div>
 </template>
 

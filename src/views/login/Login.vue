@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
-import { useClienteStore } from '../../stores/cliente-store/cliente-store';
 import { useRouter } from 'vue-router';
+import { useClienteStore } from '../../stores/cliente-store/cliente-store';
 import { useAuthStore } from '../../stores/user-store/auth-store';
 
 // import { computed, ref } from 'vue';
@@ -24,7 +24,7 @@ const handleSubmit = async () => {
     }
 
     await authStore.getUser(userName.value, password.value);
-    router.push('/home')
+    router.push("/home");
 
 }
 
