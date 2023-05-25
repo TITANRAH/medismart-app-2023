@@ -22,16 +22,18 @@ const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 app.use(pinia);
 app.use(router);
+app.mount("#app");
+// });
 
 // Obtener el nombre del cliente desde el backend
-let cliente = "copeuch";
+// let cliente = "copeuch";
 
 // Importar el store y usarlo en la aplicación
-let store = null;
+// let store = null;
 
-import( /* @vite-ignore */`./stores/${cliente}/copeuchStore`).then((module) => {
-  store = module;
-  app.use(store);
-  app.provide("store", store);
-  app.mount("#app");
-});
+// import( /* @vite-ignore */`./stores/${cliente}/${cliente}Store`).then((module) => {
+//   store = module;
+//   app.use(store);
+//   app.provide("store", store);
+//   app.mount("#app");
+// });

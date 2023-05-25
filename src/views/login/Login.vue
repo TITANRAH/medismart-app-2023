@@ -1,25 +1,16 @@
 <script setup>
-import { inject } from 'vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-// import { useClienteStore } from '../../stores/cliente-store/cliente-store';
-// import { useAuthStore } from '../../stores/user-store/auth-store';
+import { useUserStore } from '../../stores/user-store/user-store';
 
 // import { computed, ref } from 'vue';
 // import fondoLogin from  `../../assets/${clienteStore.currentCss.replace('.css','')}/img-login.svg`
 
 const router = useRouter()
-const store = inject('store');
-
-
-
-
-// const clienteStore = useClienteStore()
-// const authStore = useAuthStore()
-const cliente = ref('')
+const userStore = useUserStore()
 const userName = ref('16724918-3')
 const password = ref('Aa123456')
-// cliente.value = clienteStore.currentCss.replace('.css', '')
+
 
 const handleSubmit = async () => {
     console.log('userName', userName.value)
@@ -28,8 +19,7 @@ const handleSubmit = async () => {
     if (!userName.value || !password.value) {
         return alert('llena los campos')
     }
-
-    await store.useAuthStore().getUser(userName.value, password.value);
+    await userStore.fetchUser(userName.value, password.value);
     router.push("/home");
 
 }
@@ -39,9 +29,7 @@ const handleSubmit = async () => {
 <template>
     <div class="container">
         <div class="columna-izquierda">
-            <img v-if="cliente == 'copeuch'" src="../../assets/copeuch/img-login.png" alt="">
-            <img v-else-if="cliente == 'medismart'" src="../../assets/medismart/img-login.svg" alt="">
-            <img v-else-if="cliente == 'presente'" src="../../assets/presente/683x768.jpg" alt="">
+
             <img src="../../assets/oncologico/960x978.jpg" alt="">
         </div>
         <div class="columna-derecha">

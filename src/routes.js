@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { useAuthStore } from "./stores/user-store/auth-store";
+import { useUserStore } from "./stores/user-store/user-store";
 import Home from "./views/Home/Home.vue";
 import Login from "./views/login/Login.vue";
 import { storeToRefs } from "pinia";
 
 const requireAuth = async (to, from, next) => {
   // cuando es fuera de compoenntes el store se declara dentro de alguna funcion
-  const useAuth = useAuthStore();
-  const { user } =  storeToRefs(useAuth);
+  const useUser = useUserStore();
+  const { user } =  storeToRefs(useUser);
    
 
-  if (user.value === null) {
+  if (user.value === null || user.value === {} || user.value == undefined) {
     console.log("user es nulo", );
     next("/login");
   } else {
