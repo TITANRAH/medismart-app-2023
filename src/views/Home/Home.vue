@@ -1,11 +1,18 @@
 <script setup>
+// import { storeToRefs } from 'pinia';
 
-import { storeToRefs } from 'pinia';
-import { useAuthStore } from '../../stores/user-store/auth-store';
+import { inject } from 'vue';
 
-const useAuth = useAuthStore()
+const store = inject('store');
 
-const { user } = storeToRefs(useAuth)
+// const {user} = storeToRefs(store)
+
+// import { storeToRefs } from 'pinia';
+// import { useAuthStore } from '../../stores/user-store/auth-store';
+
+// const useAuth = useAuthStore()
+
+// const { user } = storeToRefs(useAuth)
 
 
 // useAuth.getUserLocal()
@@ -15,16 +22,16 @@ const { user } = storeToRefs(useAuth)
 </script>
 
 <template>
-    <p v-if="user === null">Sin Usuario</p>
+    <p v-if="store.useAuthStore().user === null">Sin Usuario</p>
     <div v-else>
-        <h1>Hola {{ user.userData.name }}</h1>
+        <h1>Hola {{ store.useAuthStore().user.userData.name }}</h1>
         <ul>
-            <li v-for="(servicio, index) in user.userData.homeServices" :key="index">
+            <li v-for="(servicio, index) in store.useAuthStore().user.userData.homeServices" :key="index">
                 {{ servicio.cod }}
             </li>
         </ul>
 
-        <button @click="useAuth.Logout">Logout</button>
+        <button @click="store.Logout">Logout</button>
     </div>
 </template>
 

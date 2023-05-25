@@ -1,25 +1,25 @@
 <script setup>
 import { RouterView } from 'vue-router'
 
-import { onMounted, ref } from 'vue';
-import { useClienteStore } from './stores/cliente-store/cliente-store';
+import { onMounted } from 'vue';
 
-
-const clienteStore = useClienteStore()
-const selectedCss = ref('')
 
 const loadStyles = async () => {
-    await clienteStore.fetchData();
-    selectedCss.value = clienteStore.currentCss;
-    const linkElement = document.createElement('link');
-    linkElement.rel = 'stylesheet';
-    linkElement.href = `./src/styles/${selectedCss.value}`;
-    document.head.appendChild(linkElement);
-};
-
-onMounted(() => {
-    loadStyles();
-});
+    // Obtener el nombre del cliente desde el backend
+    const cliente = 'copeuch';
+  
+    // Cargar el archivo de estilo correspondiente al cliente
+    const estilo = document.createElement('link');
+    estilo.setAttribute('rel', 'stylesheet');
+    estilo.setAttribute('href', `./src/styles/${cliente}.css`);
+    document.head.appendChild(estilo);
+  
+    console.log('estilos cargados')
+  };
+  // ./src/styles/oncologico.css
+  onMounted(() => {
+    loadStyles()
+  });
 
 
 </script>
