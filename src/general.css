@@ -26,3 +26,10 @@ html {
   height: 100vh;
   max-width: 100%;
 }
+
+.boton-forgot{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

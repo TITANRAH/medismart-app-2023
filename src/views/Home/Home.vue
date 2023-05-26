@@ -17,9 +17,7 @@ useUser.getUserLocal()
                 {{ servicio.cod }}
             </li>
         </ul>
-
         <button @click="useUser.Logout">Logout</button>
-
     </div>
 </template>
 

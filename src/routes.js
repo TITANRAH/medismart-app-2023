@@ -3,6 +3,7 @@ import { useUserStore } from "./stores/user-store/user-store";
 import Home from "./views/Home/Home.vue";
 import Login from "./views/login/Login.vue";
 import { storeToRefs } from "pinia";
+import Forgot from "./views/login/Forgot.vue";
 
 const requireAuth = async (to, from, next) => {
   // cuando es fuera de compoenntes el store se declara dentro de alguna funcion
@@ -21,8 +22,14 @@ const requireAuth = async (to, from, next) => {
 
 const routes = [
   {
+    
     path: "/login",
     component: Login,
+  },
+  {
+    
+    path: "/forgot",
+    component: Forgot,
   },
   {
     path: "/home",
