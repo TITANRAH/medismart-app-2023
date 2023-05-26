@@ -1,0 +1,101 @@
+.caja-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.caja-login input {
+  border: none;
+  background-color: #ffffff;
+  padding: 0.8rem;
+  margin-top: 10px;
+  border: 1px solid #564b52;
+}
+
+.caja-login h1 {
+  color: #ff7d00;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.caja-login label {
+  color: #564b52;
+}
+
+.caja-login img {
+  width: 40%;
+  margin: auto;
+}
+
+.logos-colaboradores{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.boton-ingresar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.boton-ingresar button {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #ff7d00;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.columna-derecha {
+  background-color: #ffffff;
+}
+
+.linea {
+  margin-top: 5rem;
+  border-top: 1px solid #c8c8c8;
+}
+
+.form-login {
+  width: 100%;
+}
+
+.registrate-aca {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.discapacidad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  gap: 0rem;
+  margin: auto;
+}
+
+.discapacidad div {
+  width: 50px;
+  height: 45px;
+  border: 2px solid #ff7d00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff7d00;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}

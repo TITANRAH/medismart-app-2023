@@ -9,7 +9,7 @@ useUser.getUserLocal()
 </script>
 
 <template>
-    <p v-if="user === null">Sin Usuario</p>
+    <p v-if="user === null || user === {} || user === undefined">Sin Usuario</p>
     <div v-else>
         <h1>Hola {{ user.userData.name }}</h1>
         <ul>
@@ -19,6 +19,7 @@ useUser.getUserLocal()
         </ul>
 
         <button @click="useUser.Logout">Logout</button>
+
     </div>
 </template>
 

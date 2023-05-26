@@ -5,7 +5,7 @@ import { onMounted } from 'vue';
 
 const loadStyles = async () => {
     // Obtener el nombre del cliente desde el backend
-    const cliente = 'copeuch';
+    const cliente = 'cardiff';
   
     // Cargar el archivo de estilo correspondiente al cliente
     const estilo = document.createElement('link');
@@ -13,7 +13,7 @@ const loadStyles = async () => {
     estilo.setAttribute('href', `./src/styles/${cliente}.css`);
     document.head.appendChild(estilo);
   
-    console.log('estilos cargados')
+    console.log('estilos cargados',estilo)
   };
   // ./src/styles/oncologico.css
   onMounted(() => {
