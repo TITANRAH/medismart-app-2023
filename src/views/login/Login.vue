@@ -2,7 +2,8 @@
 import { ref } from 'vue';
 import { useRouter, RouterLink } from 'vue-router';
 import { useUserStore } from '../../stores/user-store/user-store';
-import Forgot from './Forgot.vue'
+import Accesibility from '../../components/accessibility/Accesibility.vue';
+
 
 // import { computed, ref } from 'vue';
 // import fondoLogin from  `../../assets/${clienteStore.currentCss.replace('.css','')}/img-login.svg`
@@ -58,12 +59,8 @@ const handleSubmit = async () => {
 
                     </div>
 
-                    <div class="discapacidad">
-
-                        <div>+A</div>
-                        <div>A</div>
-                        <div>-A</div>
-                    </div>
+                    <Accesibility></Accesibility>
+                   
 
                     <div class="logos-colaboradores">
                         <img src="./../../assets/cardiff/logo-paribas.png" alt="">

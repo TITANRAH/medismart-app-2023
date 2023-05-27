@@ -5,6 +5,7 @@ import router from "./routes";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import App from "./App.vue";
 import '../src/styles/cardiff.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 // Realizar la solicitud HTTP y obtener el nombre del cliente
 

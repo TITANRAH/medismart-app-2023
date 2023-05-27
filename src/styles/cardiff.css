@@ -1,12 +1,12 @@
-
 :root {
-  --color-primary : colorPrimary;
+  --color-primary: colorPrimary;
   --color-secondary: colorSecondary;
   --color-tertiary: colorTertiary;
   --color-quaternary: colorQuaternary;
   --color-label: colorLabel;
-
 }
+
+/* LOGIN */
 
 .caja-login {
   display: flex;
@@ -15,7 +15,7 @@
   width: 50%;
   margin: auto;
   padding: 2rem;
-  background-color: var(--color-terciary) ;
+  background-color: var(--color-terciary);
   margin-bottom: 1rem;
 }
 
@@ -42,11 +42,11 @@
   margin: auto;
 }
 
-.logos-colaboradores{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.logos-colaboradores {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .boton-ingresar {
@@ -88,7 +88,7 @@
   justify-content: space-evenly;
 }
 
-.discapacidad {
+.accesibilidad {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -97,7 +97,7 @@
   margin: auto;
 }
 
-.discapacidad div {
+.accesibilidad div {
   width: 50px;
   height: 45px;
   border: 2px solid var(--color-primary);
@@ -109,3 +109,155 @@
   border-radius: 3px;
   cursor: pointer;
 }
+
+/* FIN LOGIN */
+
+/* HEADERS */
+
+header {
+  background-color: var(--color-tertiary);
+  padding: 9px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sub-header-dos {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+}
+
+.sub-header-uno {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--color-tertiary);
+  margin-top: 4px;
+}
+
+.nav-circle-img {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.button-header button {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-tertiary);
+  padding: 1rem;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 0.75rem;
+}
+
+.icono i {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.alert-icons {
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  margin-right: 4rem;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconos-header {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+
+nav img {
+  padding-left: 1rem;
+  width: 10rem;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #333;
+}
+
+/* FIN HEADERS */
+
+/* FOOTER */
+
+footer{
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+}
+
+/* FIN FOOTER */
+
+/* HOME-SERVICES */
+
+.home{
+  width: 100%;
+}
+.home-services {
+  width: 80%;
+  margin: auto;
+}
+
+.box-service {
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+  height: 10rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.home-services h2 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.box-service img {
+  width: 2rem;
+  margin: auto;
+}
+
+.box-service h4 {
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+/* FIN HOME SERVICES */
